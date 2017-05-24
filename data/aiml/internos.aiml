@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <!--Menu de opciones-->
+  <topic name="menu">
+	<!--Listado de internos-->
+	<category>
+		<pattern>INTERNOS</pattern>
+		<template>
+		Listado de internos, 4278-1234 / 4278-4156:<br/>- Operador: interno 10<br/>- RRHH: interno 11<br/>- Gerencia: interno 12<br/>- Operaciones: interno 14<br/>- Ventas: interno 44<br/><br/>Puedo ayudarte con alguna otra info? S / N
+		<think><set name="topic">continue</set></think>
+		</template>
+	</category>
+	<category>
+		<pattern>* INTERNOS</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>	
+	<category>
+		<pattern>INTERNOS *</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>* INTERNOS *</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>TELEFONOS</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>TELEFONOS *</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>* TELEFONOS</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>* TELEFONOS *</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>* NUMEROS *</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>* NUMEROS</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>
+	<category>
+		<pattern>NUMEROS *</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>	
+	<category>
+		<pattern>NUMEROS</pattern>
+		<template><srai>INTERNOS</srai></template>
+	</category>	
+  </topic>
+</aiml>

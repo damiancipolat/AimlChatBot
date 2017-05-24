@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <!--Menu de opciones-->
+  <topic name="menu">
+	<!--Horarios de atención-->
+	<category>
+		<pattern>ATENCION</pattern>
+		<template>
+		Horarios de atención:<br/>Sede central:    Lunes a viernes de 09 a 18hs.<br/>Sucursal centro: Lunes a Sabado de 12 a 15hs.<br/>Sucursal Norte:  Miercoles a Sabado de 12 a 15hs.<br/>
+		<think><set name="topic">continue</set></think>		
+		</template>
+	</category>  
+	<category>
+		<pattern>HORARIOS DE ATENCION</pattern>
+		<template><srai>ATENCION</srai></template>
+	</category>
+	<category>
+		<pattern>* ATENCION</pattern>
+		<template><srai>ATENCION</srai></template>
+	</category>
+	<category>
+		<pattern>ATENCION *</pattern>
+		<template><srai>ATENCION</srai></template>
+	</category>
+	<category>
+		<pattern>* ATENCION *</pattern>
+		<template><srai>ATENCION</srai></template>
+	</category>	
+	<category>
+		<pattern>HORARIOS *</pattern>
+		<template><srai>ATENCION</srai></template>
+	</category>
+	<category>
+		<pattern>* HORARIOS *</pattern>
+		<template><srai>ATENCION</srai></template>
+	</category>
+	<category>
+		<pattern>HORARIOS</pattern>
+		<template><srai>ATENCION</srai></template>
+	</category>	
+  </topic>
+</aiml>

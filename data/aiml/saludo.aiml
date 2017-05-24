@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <category>
+    <pattern>HOLA</pattern>
+    <template>
+		Hola bienvenido al chat de la recepción central, soy un asistente virtual,<br/>para poder comunicarnos mejor, Como es tu nombre?..
+		<think><set name="topic">saludo</set></think>
+	</template>
+  </category>
+  <!--Diferentes formas de decir hola -->
+  <category>
+    <pattern>* HOLA</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>
+  <category>
+    <pattern>HOLA *</pattern>
+    <template><srai>HOLA</srai></template>
+  </category> 
+  <category>
+    <pattern>* HOLA *</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>  
+  <category>
+    <pattern>QUE TAL</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>
+  <category>
+    <pattern>* QUE TAL</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>
+  <category>
+    <pattern>* QUE TAL *l</pattern>
+    <template><srai>HOLA</srai></template>
+  </category> 
+  <category>
+    <pattern>QUE TAL *</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>  
+  <category>
+    <pattern>BUEN DIA</pattern>
+    <template><srai>HOLA</srai></template>
+  </category> 
+  <category>
+    <pattern>BUEN DIA *</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>    
+  <category>
+    <pattern>BUENAS TARDES</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>
+  <category>
+    <pattern>BUENAS TARDES *</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>  
+  <category>
+    <pattern>BUENAS NOCHES</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>
+  <category>
+    <pattern>BUENAS NOCHES *</pattern>
+    <template><srai>HOLA</srai></template>
+  </category>
+  <!--Luego del saludo recibo el nombre-->
+  <topic name="saludo">
+	  <category>
+		<pattern>*</pattern>
+		<template>
+			<think><set name="nombre"><star/></set></think>
+			<think><set name="topic">menu</set></think>
+			Hola <get name="nombre"/>, puedo responder preguntas sobre:<br/><br/>- Horarios de atención.<br/>- Listado de internos.<br/>- Recado de mensajes.<br/><br/>Por favor se simple con tus preguntas.<br/>¿En que puedo ayudarte?
+		</template>
+	  </category>
+  </topic>
+</aiml>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <!--Menu de opciones-->
+  <topic name="menu">
+	<!--Mensajes-->
+	<category>
+		<pattern>MENSAJES</pattern>
+		<template>
+		Escribi tu mensaje a continuación, luego presionar enter:
+		<think><set name="topic">mensaje</set></think>
+		</template>
+	</category>  
+	<category>
+		<pattern>ENVIAR *</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>
+	<category>
+		<pattern>* ENVIAR</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>
+	<category>
+		<pattern>* MENSAJES</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>	
+	<category>
+		<pattern>MENSAJES *</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>
+	<category>
+		<pattern>* MENSAJES *</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>
+	<category>
+		<pattern>* RECADO</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>	
+	<category>
+		<pattern>RECADO *</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>
+	<category>
+		<pattern>* RECADO *</pattern>
+		<template><srai>MENSAJES</srai></template>
+	</category>
+  </topic>
+  <!--Recibe el mensaje-->
+  <topic name="mensaje">
+	<category>
+		<pattern>*</pattern>
+		<template>	
+			Mensaje guardado OK!
+			<br/>Puedo ayudarte con alguna otra info? S / N
+			<think><set name="topic">continue</set></think>		
+		</template>
+	</category>    
+  </topic>  
+</aiml>

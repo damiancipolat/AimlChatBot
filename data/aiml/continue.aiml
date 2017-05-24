@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <!--Continuar o finalizar.-->
+  <topic name="continue">
+      <category>
+         <pattern>*</pattern>
+         <template>
+			<think><set name="retry"><star/></set></think>
+		    <condition name="retry" value="s">
+				¿Que necesitas?<br/>- Horarios de atención.<br/>- Listado de internos.<br/>- Recado de mensajes.<br/>¿Cual elegis?
+				<think><set name="topic">menu</set></think>				
+            </condition>
+		    <condition name="retry" value="n">
+				<random>
+					<li>Gracias por tu consulta!</li>
+					<li>Saludos <get name="nombre"/>, que tengas un buen dia.</li>
+					<li>Estoy a tu disposición, saludos</li>
+					<think><set name="topic">fin</set></think>	
+				</random>
+            </condition>            
+         </template>
+      </category>	
+  </topic>
+</aiml>

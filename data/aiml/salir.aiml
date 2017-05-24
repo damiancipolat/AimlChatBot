@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <!--Menu de opciones-->
+  <topic name="menu">
+	<!--Horarios de atención-->
+	<category>
+		<pattern>SALIR</pattern>
+		<template>
+			<random>
+				<li>Gracias por tu tiempo!</li>
+				<li>Escribinos nuevamente, saludos!</li>
+				<li>Te esperamos cuando quieras.</li>				
+				<li>Volve pronto.</li>						
+			</random>
+		</template>
+	</category>
+	<category>
+		<pattern>* SALIR *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>	
+	<category>
+		<pattern>SALIR *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>
+	<category>
+		<pattern>* SALIR</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>
+	<category>
+		<pattern>FIN *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>
+	<category>
+		<pattern>* FIN *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>	
+	<category>
+		<pattern>* FIN</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>
+	<category>
+		<pattern>FIN</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>	
+	<category>
+		<pattern>* NADA *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>
+	<category>
+		<pattern>* NADA</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>	
+	<category>
+		<pattern>NADA *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>
+	<category>
+		<pattern>NADA</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>	
+	<category>
+		<pattern>* NINGUNA *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>
+	<category>
+		<pattern>* NINGUNA</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>	
+	<category>
+		<pattern>NINGUNA *</pattern>
+		<template><srai>SALIR</srai></template>
+	</category>	
+  </topic>
+</aiml>
