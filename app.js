@@ -42,7 +42,11 @@ process.stdout.write(prompt);
 
 process.stdin.addListener('data', function (d) {
 	var sentence = d.toString().substring(0, d.length - 1);
-
+	
+	//Paso a mayuscula.
+	sentence = sentence.toUpperCase();
+	
+	console.log(sentence);
 	if (sentence === 'quit' || sentence === 'exit') {
 		console.log('Yeah, fuck off.');
 		process.exit(0);
