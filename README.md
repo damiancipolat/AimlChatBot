@@ -1,4 +1,6 @@
 # AIML CHAT BOT
+![N|Solid](https://pbs.twimg.com/media/ClXxXJYWAAAP0Pb.png)
+
 > Chatbot desarrollado usando Node Js y el proyecto Surly https://github.com/mrchimp/surly.
 
 ## Código fuente:
